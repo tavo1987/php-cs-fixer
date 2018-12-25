@@ -1,9 +1,9 @@
-FROM php:7-alpine
+FROM php:7.2-cli
 
 LABEL maintainer "Edwin Ramírez <tavo198718@gmail.com"
 
 RUN cd /usr/local/bin \
-    && curl -sL https://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O php-cs-fixer \
-    && chmod +x php-cs-fixers
+    && curl -L https://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -o php-cs-fixer \
+    && chmod +x php-cs-fixer
 
 WORKDIR /app
